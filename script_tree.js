@@ -139,7 +139,7 @@ function main(o, direction) {
         .call(rect);
       
     children.append("text")
-        .attr("class", "ctext")
+        .attr("class", "ctext").attr('font-size', '16px')
         .text(function(d) { return d.key; })
         .call(text2);
 
@@ -163,14 +163,14 @@ function main(o, direction) {
 
     toolp = d3.select("body").append("div")   
     .attr("class", "tooltip")               
-    .style("opacity", 0);        
+    .style("opacity", 0);            
 
       d3.selectAll('.child')
       .on('mouseover', function(d) {  
                   toolp.transition()
                 .duration(50)
                 .style('opacity', 1)
-                .style("left", (d3.event.pageX + 30) + "px")     
+                .style("left", (d3.event.pageX + 10) + "px")     
                 .style("top", (d3.event.pageY - 30) + "px");
                 
         
@@ -178,8 +178,8 @@ function main(o, direction) {
                 .attr('class', 'tooltip_text')
                 .html(function() {
                 if (d['key']) {
-//                    return d.parent['key'] + '<br>' + '> ' + d['key'] + '<br>' + '>  ' + convert(d.value);
-                    return d.parent['key'] + '> ' + d['key'] +  '>  ' + convert(d.value);                    
+                    return d.parent['key'] + '<br>' + '> ' + d['key'] + '<br>' + '>  ' + convert(d.value);
+//                    return d.parent['key'] + '> ' + d['key'] +  '>  ' + convert(d.value);                    
                     } else if (d['level_2']) {
                         return d['level_1'] + '<br>' + '> ' + d['level_2'] + '<br>' + '>  ' + convert(d.value);
                     } else if (d['level_1']) {

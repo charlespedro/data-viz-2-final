@@ -79,9 +79,9 @@ function Chart (dir) {
                 .attr('class', 'tooltip_text')
                 .html(function() {
                 if (d['cname']) {
-                    return d['cname'] + ', ' + convert(d['value']);
+                    return d['cname'] + '<br>> ' + convert(d['value']);
                     } else {
-                    return d['name'] + ', ' + convert(d['value']);
+                    return d['name'] + '<br>> ' + convert(d['value']);
                     }        
                 })
             })
