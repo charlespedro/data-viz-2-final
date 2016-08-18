@@ -7,32 +7,27 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
     <link rel="stylesheet" href="style.css">    
     
-    
-
 <title>Advanced Data Visualization Final Project</title>
     
-
 </head>    
-    
     
 <body>
 <div class='header section'>
   <div class='container'>
 
-            <h1>Advanced Data Visuazliation Final Project</h1>
+    <h1>Advanced Data Visuazliation Final Project</h1>
 
-            <p>This project explores US imports and exports by comparing the trade of goods and services, highlighting the latter. Three graphs are presented. Navigate below to see cool circle packs and colorful scatter plot.</p>
+    <p>This project explores US imports and exports by comparing the trade of goods and services, highlighting the latter. Three graphs are presented. Navigate below to see cool circle packs and a colorful scatter plot.</p>
+    <p>Sources: Bureau of Economic Analysis, broken down by 
+    <a href='http://www.bea.gov/iTable/bp_download_modern.cfm?pid=11'>country</a> and 
+    <a href='http://www.bea.gov/iTable/iTable.cfm?ReqID=62&step=1#reqid=62&step=2&isuri=1&6210=1&6211=7'>goods and services categories.</a></p>  
+      
   </div>              
     
-    <table style="width:100%">        
+    <table style="width:100%">     
         <tr>        
-            <td style="width:15.4%"><a href='index_xy.html'><h3><-- Scatterplot</h3></a></td>            
-            <td>
-    Sources: Bureau of Economic Analysis, broken down by 
-    <a href='http://www.bea.gov/iTable/bp_download_modern.cfm?pid=11'>country</a> and 
-    <a href='http://www.bea.gov/iTable/iTable.cfm?ReqID=62&step=1#reqid=62&step=2&isuri=1&6210=1&6211=7'>goods and services categories.</a>         
-            </td>
-            <td style="text-align:right, padding=10px"><a href='index_circle.html'><h3>Circles --></h3></a></td>
+            <td style="width:50%"><a href='index_xy.html'><h3>&#60-- Scatterplot</h3></a></td>            
+            <td style="text-align:right"><a href='index_circle.html'><h3>Circles --></h3></a></td>
         </tr>
     </table>      
 
@@ -40,18 +35,13 @@
   
     
 <div class='main section'>
-   
-      
-    
-    
-
   <div class='container'>
  
       <br>
-          <form>
-  <label><input type="radio" name="mode" value="imports" checked> Imports</label>
-  <label><input type="radio" name="mode" value="exports"> Exports</label>
-</form> 
+     <form>
+      <label><input type="radio" name="mode" value="imports" checked> Imports</label>
+      <label><input type="radio" name="mode" value="exports"> Exports</label>
+    </form> 
       <br>
 
       <div id="chart" style="width:100%"></div>      

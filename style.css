@@ -7,7 +7,7 @@
         
     }     
     a:link, a:visited {
-    color: #ffb1b9;          
+    color: #DDDEED;          
                   
       }
 
@@ -16,7 +16,7 @@
         height: auto;
         padding: 10px;
         background-color: #F0F7C3;
-          background: orange;
+/*          background: orange;*/
         border-radius: 10px;
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
         pointer-events: none;
@@ -26,18 +26,7 @@
             display: none;
     }
 
-    div.tooltip {   
-        position: absolute;         
-        text-align: center; 
-        vertical-align: middle;        
-        padding: 5px;               
-        background: #fee5cd; 
-        border: 0px;        
-        border-radius: 6px;         
-        pointer-events: none;   
-        font-size: 16px;   /* not in circles */ 
 
-    }
 
     .label {
       font: 18px "Trebuchet MS", Helvetica, sans-serif;
@@ -45,6 +34,10 @@
       text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
     }
 
+td {
+    padding-right: 50px;
+    padding-left: 30px;      
+}
 
 
 /* main page */
@@ -141,6 +134,19 @@
 
     rect.parent {
         pointer-events: none;
+    }
+
+    div.tooltip {   
+        position: absolute;         
+        text-align: left;         
+        vertical-align: middle;        
+        padding: 5px;               
+        background: #fee5cd; 
+        border: 0px;        
+        border-radius: 6px;         
+        pointer-events: none;   
+        font-size: 16px;   /* not in circles */ 
+
     }
 
 

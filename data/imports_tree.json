@@ -98,6 +98,7 @@
   {
     "level_1": "Financial Services",
     "level_2": "Securities brokerage, underwriting, and related services",
+    "level_2_short": "Securites brokerage",
     "key": "", 
     "value": 3394
   },
@@ -120,37 +121,37 @@
     "value": 3872
   },
   {
-    "level_1": "Intellectual",
+    "level_1": "Intellectual Property",
     "level_2": "Industrial processes",
     "key": "", 
     "value": 23783
   },
   {
-    "level_1": "Intellectual",
+    "level_1": "Intellectual Property",
     "level_2": "Computer software",
     "key": "", 
     "value": 6773
   },
   {
-    "level_1": "Intellectual",
+    "level_1": "Intellectual Property",
     "level_2": "Audio-visual and related products",
     "key": "Movies and television programming", 
     "value": 3203
   },
   {
-    "level_1": "Intellectual",
+    "level_1": "Intellectual Property",
     "level_2": "Audio-visual and related products",
     "key": "Books and sound recordings", 
     "value": 2789
   },
   {
-    "level_1": "Intellectual",
+    "level_1": "Intellectual Property",
     "level_2": "Audio-visual and related products",
     "key": "Broadcasting and recording of live events", 
     "value": 1651
   },
   {
-    "level_1": "Intellectual",
+    "level_1": "Intellectual Property",
     "level_2": "Other intellectual property",
     "key": "", 
     "value": 114
