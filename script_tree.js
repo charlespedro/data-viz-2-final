@@ -270,7 +270,7 @@ function main(o, direction) {
 
       function name(d) {
         return d.parent
-            ? name(d.parent) + " / " + d.key + " (" + convert(d.value) + ")"
+            ? name(d.parent) + " > " + d.key + " (" + convert(d.value) + ")"
             : d.key + " (" + convert(d.value) + ")";      
       }
     });        

@@ -54,7 +54,7 @@
     .label,
     .node--root
         {
-          pointer-events: none;
+        pointer-events: none;
         }
 
     .node {
@@ -74,6 +74,11 @@
     .node--leaf {
       fill: #eefdf2;
     }
+
+pnode {
+    horizontal-align: center;
+    
+}
 
 
 /* treemap */
@@ -135,6 +140,9 @@
 
     }
 
+    #right {
+        text-align: right;    
+    }
 
 /* scatterplot */
 

@@ -1,17 +1,19 @@
 var color = d3.scale.category20c();
 
 var margin = 10,
-    diameter = 960;
+    diameter = 1000;
     
 var pack = d3.layout.pack()
-    .padding(3)
+    .padding(5)
     .size([diameter - margin, diameter - margin])
     .value(function(d) { return d.size; });   
 
-var svg = d3.select("body").append("svg")
-    .attr("width", diameter + 500)
+var svg = d3.select("body")
+    .attr("class", "pnode")
+    .append("svg")
+    .attr("width", diameter + 800)
     .attr("height", diameter)
-    .attr('align', 'center')
+//    .attr('align', 'center')
     .append("g")
     .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");  
 
