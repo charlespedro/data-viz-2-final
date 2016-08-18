@@ -16,7 +16,6 @@
         height: auto;
         padding: 10px;
         background-color: #F0F7C3;
-/*          background: orange;*/
         border-radius: 10px;
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
         pointer-events: none;
@@ -34,21 +33,12 @@
       text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
     }
 
-td {
-    padding-right: 50px;
-    padding-left: 30px;      
-}
-
-
-/* main page */
-
     h3 {
-
         padding-left: 30px;
-
+        padding-right: 30px;
     }
 
-
+/* main page */
 
     .section {
       padding: 1em 0;
@@ -58,10 +48,6 @@ td {
       color: #ff944d;
       padding: 1em 0 2em;
     }
-
-      
-
-
 
 /* circle packs */
 

@@ -178,7 +178,8 @@ function main(o, direction) {
                 .attr('class', 'tooltip_text')
                 .html(function() {
                 if (d['key']) {
-                    return d.parent['key'] + '<br>' + '> ' + d['key'] + '<br>' + '>  ' + convert(d.value);
+//                    return d.parent['key'] + '<br>' + '> ' + d['key'] + '<br>' + '>  ' + convert(d.value);
+                    return d.parent['key'] + '> ' + d['key'] +  '>  ' + convert(d.value);                    
                     } else if (d['level_2']) {
                         return d['level_1'] + '<br>' + '> ' + d['level_2'] + '<br>' + '>  ' + convert(d.value);
                     } else if (d['level_1']) {
