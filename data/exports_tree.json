@@ -1,0 +1,278 @@
+[
+  {
+    "level_1": "Maintenance",
+    "level_2": "",
+    "key": "",      
+    "value": 22389
+  },
+  {
+    "level_1": "Transport",
+    "level_2": "Sea Transport",
+    "key": "Freight",      
+    "value": 4316
+  },
+  {
+    "level_1": "Transport",
+    "level_2": "Sea Transport",
+    "key": "Port",      
+    "value": 13836
+  },
+  {
+    "level_1": "Transport",
+    "level_2": "Air Transport",
+    "key": "Passenger",      
+    "value": 43516
+  },
+  {
+    "level_1": "Transport",
+    "level_2": "Air Transport",
+    "key": "Freight",      
+    "value": 14261
+  },
+  {
+    "level_1": "Transport",
+    "level_2": "Air Transport",
+    "key": "Port",      
+    "value": 9721
+  },
+  {
+    "level_1": "Transport",
+    "level_2": "Other Transport",
+    "key": "Postal Services",      
+    "value": 348
+  },
+  {
+    "level_1": "Transport",
+    "level_2": "Other Transport",
+    "key": "Roads and Other Transport",      
+    "value": 4033
+  },
+  {
+    "level_1": "Travel",
+    "level_2": "Business",
+    "key": "Expenditures by border, seasonal, and other short-term workers",      
+    "value": 7255
+  },
+  {
+    "level_1": "Travel",
+    "level_2": "Business",
+    "key": "Other Business Travel",  
+    "value": 33103
+  },
+  {
+    "level_1": "Travel",
+    "level_2": "Personal",
+    "key": "Health related",  
+    "value": 3468
+  },
+  {
+    "level_1": "Travel",
+    "level_2": "Personal",
+    "key": "Education related",  
+    "value": 30795
+  },
+  {
+    "level_1": "Travel",
+    "level_2": "Personal",
+    "key": "Other Personal Travel",  
+    "value": 102620
+  },
+  {
+    "level_1": "Insurance Services",
+    "level_2": "Direct Insurance",
+    "key": "", 
+    "value": 4272
+  },
+  {
+    "level_1": "Insurance Services",
+    "level_2": "Reinsurance",
+    "key": "", 
+    "value": 11304
+  },
+  {
+    "level_1": "Insurance Services",
+    "level_2": "Auxillary Insurance Services",
+    "key": "", 
+    "value": 1841
+  },
+  {
+    "level_1": "Financial Services",
+    "level_2": "Securities brokerage, underwriting, and related services",
+    "key": "", 
+    "value": 16098
+  },
+  {
+    "level_1": "Financial Services",
+    "level_2": "Financial management",
+    "key": "", 
+    "value": 33162
+  },
+  {
+    "level_1": "Financial Services",
+    "level_2": "Credit card and other credit-related services",
+    "key": "", 
+    "value": 19309
+  },
+  {
+    "level_1": "Financial Services",
+    "level_2": "Securities lending",
+    "key": "", 
+    "value": 18721
+  },
+  {
+    "level_1": "Intellectual",
+    "level_2": "Industrial processes",
+    "key": "", 
+    "value": 48723
+  },
+  {
+    "level_1": "Intellectual",
+    "level_2": "Computer software",
+    "key": "", 
+    "value": 39514
+  },
+  {
+    "level_1": "Intellectual",
+    "level_2": "Trademarks",
+    "key": "", 
+    "value": 16883
+  },    
+  {
+    "level_1": "Intellectual",
+    "level_2": "Franchise Fees",
+    "key": "", 
+    "value": 5735
+  },    
+  {
+    "level_1": "Intellectual",
+    "level_2": "Audio-visual and related products",
+    "key": "Movies and television programming", 
+    "value": 16309
+  },
+  {
+    "level_1": "Intellectual",
+    "level_2": "Audio-visual and related products",
+    "key": "Books and sound recordings", 
+    "value": 1877
+  },
+  {
+    "level_1": "Intellectual",
+    "level_2": "Audio-visual and related products",
+    "key": "Broadcasting and recording of live events", 
+    "value": 1228
+  },
+  {
+    "level_1": "Intellectual",
+    "level_2": "Other intellectual property",
+    "key": "", 
+    "value": 94
+  },
+  {
+    "level_1": "Telecommunications, computer, and information services",
+    "level_2": "Telecommunications services",
+    "key": "", 
+    "value": 13550
+  },
+  {
+    "level_1": "Telecommunications, computer, and information services",
+    "level_2": "Computer services",
+    "key": "", 
+    "value": 15310
+  },
+  {
+    "level_1": "Telecommunications, computer, and information services",
+    "level_2": "Information services",
+    "key": "", 
+    "value": 7025
+  },
+  {
+    "level_1": "Other business services",
+    "level_2": "Research and development services",
+    "key": "", 
+    "value": 33192
+  },
+  {
+    "level_1": "Other business services",
+    "level_2": "Professional and management consulting services",
+    "key": "Legal services", 
+    "value": 9104
+  },
+  {
+    "level_1": "Other business services",
+    "level_2": "Professional and management consulting services",
+    "key": "Accounting, auditing, and bookkeeping services", 
+    "value": 1391
+  },
+  {
+    "level_1": "Other business services",
+    "level_2": "Professional and management consulting services",
+    "key": "Business and management consulting and public relations services", 
+    "value": 39149
+  },
+  {
+    "level_1": "Other business services",
+    "level_2": "Professional and management consulting services",
+    "key": "Advertising", 
+    "value": 9842
+  },
+  {
+    "level_1": "Other business services",
+    "level_2": "Technical, trade-related, and other business services",
+    "key": "Architectural and engineering services", 
+    "value": 12343
+  },
+  {
+    "level_1": "Other business services",
+    "level_2": "Technical, trade-related, and other business services",
+    "key": "Construction", 
+    "value": 1971
+  },
+  {
+    "level_1": "Other business services",
+    "level_2": "Technical, trade-related, and other business services",
+    "key": "Industrial engineering", 
+    "value": 4085
+  },
+  {
+    "level_1": "Other business services",
+    "level_2": "Technical, trade-related, and other business services",
+    "key": "Mining", 
+    "value": 3797
+  },
+  {
+    "level_1": "Other business services",
+    "level_2": "Technical, trade-related, and other business services",
+    "key": "Operating leasing services", 
+    "value": 7505
+  },
+  {
+    "level_1": "Other business services",
+    "level_2": "Technical, trade-related, and other business services",
+    "key": "Trade-related services", 
+    "value": 1269
+  },
+  {
+    "level_1": "Other business services",
+    "level_2": "Technical, trade-related, and other business services",
+    "key": "Sports and performing arts", 
+    "value": 817
+  },
+  {
+    "level_1": "Other business services",
+    "level_2": "Technical, trade-related, and other business services",
+    "key": "Training services", 
+    "value": 2515
+  },
+  {
+    "level_1": "Other business services",
+    "level_2": "Technical, trade-related, and other business services",
+    "key": "Other business services", 
+    "value": 2532
+  },
+  {
+    "level_1": "Government goods and services",
+    "level_2": "",
+    "key": "", 
+    "value": 20438
+  }
+]

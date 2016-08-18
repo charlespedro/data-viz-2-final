@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Final Project: Circles</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    
+  <link rel="stylesheet" href="style.css">    
+
+</head>
+<body>
+<div class='header section'>
+  <div class='container'>
+    <h1>Final Project: Import and Export Data</h1>
+    <p>The below circles show US imports and exports broken down by trade and services. All numbers are in millions of USD.</p>
+      
+    <p>Sources: 
+    <a href='http://www.bea.gov/iTable/bp_download_modern.cfm?pid=11'>Bureau of Economic Analysis</a></p>
+      
+    <table style="width:100%">
+        <tr>
+            <td><a href='index.html'><h3><-- Main</h3></a></td>
+            <td style="text-align:right"><a href='index_xy.html'><h3>Scatterplot --></h3></a></td>
+        </tr>
+    </table>        
+      
+  </div>
+</div>
+<div class='controls section'>
+  <div class='container'>
+      
+    <div class='btn-toolbar'>
+      <label for='direction'>Trade Direction: </label>
+      <select id='direction'>
+        <option value='data/imports_circle.json'>Imports</option>
+        <option value='data/exports_circle.json'>Exports</option>
+      </select>
+    </div>
+  </div>    
+</div>    
+    
+<div class='main section'>
+  <div class='container'>
+      
+    <div class="row">
+        <div id="chart" style="width:100%">    
+        </div>
+
+    </div>       
+  </div>
+</div>
+    
+    
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" src="https://npmcdn.com/d3-tip@0.6.7/index.js"></script>        
+    
+    <script type="text/javascript" src="script_circle.js"></script>
+    
+</body>
+</html>    

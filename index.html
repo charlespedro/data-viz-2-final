@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Final Project</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="style.css">    
+    
+    
+
+<title>Advanced Data Visuazliation Final Project</title>
+    
+
+</head>    
+    
+    
+<body>
+<div class='header section'>
+  <div class='container'>
+    <table style="width:100%">
+        <tr>
+            <h1>Advanced Data Visuazliation Final Project</h1>
+        </tr>
+        <tr>
+            <p>This project explores US imports and exports by comparing the trade of goods and services, highlighting the latter. Three graphs are presented. Navigate below to see cool circle packs and colorful scatter plot.</p>
+        </tr>
+    </table>    
+  </div>              
+    
+    <table style="width:100%">        
+        <tr>        
+            <td style="width:15.4%"><a href='index_xy.html'><h3><-- Scatterplot</h3></a></td>            
+            <td>
+    Sources: Bureau of Economic Analysis, broken down by 
+    <a href='http://www.bea.gov/iTable/bp_download_modern.cfm?pid=11'>country</a> and 
+    <a href='http://www.bea.gov/iTable/iTable.cfm?ReqID=62&step=1#reqid=62&step=2&isuri=1&6210=1&6211=7'>goods and services categories.</a>         
+            </td>
+            <td style="text-align:right, padding=10px"><a href='index_circle.html'><h3>Circles --></h3></a></td>
+        </tr>
+    </table>      
+
+</div>
+  
+    
+<div class='main section'>
+   
+      
+    
+    
+
+  <div class='container'>
+ 
+      <br>
+          <form>
+  <label><input type="radio" name="mode" value="imports" checked> Imports</label>
+  <label><input type="radio" name="mode" value="exports"> Exports</label>
+</form> 
+      <br>
+
+      <div id="chart" style="width:100%"></div>      
+      <br>
+     
+  </div>
+</div>
+    
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" src="https://npmcdn.com/d3-tip@0.6.7/index.js"></script>        
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    
+    <script type="text/javascript" src="script_tree.js"></script>    
+
+    
+</body>
+</html>    
