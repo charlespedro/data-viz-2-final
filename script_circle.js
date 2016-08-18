@@ -9,8 +9,9 @@ var pack = d3.layout.pack()
     .value(function(d) { return d.size; });   
 
 var svg = d3.select("body").append("svg")
-    .attr("width", diameter + 100)
+    .attr("width", diameter + 500)
     .attr("height", diameter)
+    .attr('align', 'center')
     .append("g")
     .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");  
 
