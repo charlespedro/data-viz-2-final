@@ -1,4 +1,7 @@
 // declare variables
+
+direction = 'data/imports_tree.json';
+
 var margin = {top: 24, right: 0, bottom: 0, left: 0};
     
 var width = 1140,
@@ -6,8 +9,14 @@ var width = 1140,
     root,
     rname = 'Total',    
     transitioning,
-    color = d3.scale.category20(),
-    direction = 'data/imports_tree.json'; 
+    color = d3.scale.category20();
+     
+
+var colr = d3.scale.linear()
+    .domain([-1, 5])
+    .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
+    .interpolate(d3.interpolateHcl);
+
     
 var svg = d3.select("#chart").append("svg")
   .attr("width", width + margin.left + margin.right)
@@ -18,8 +27,12 @@ var svg = d3.select("#chart").append("svg")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
   .style("shape-rendering", "crispEdges");    
 
-  var grandparent = svg.append("g")
-      .attr("class", "grandparent");    
+var grandparent = svg.append("g")
+    .attr("class", "grandparent");  
+
+
+// define main function
+  function main(o, direction) {
     
   var x = d3.scale.linear()
       .domain([0, width])
@@ -29,12 +42,12 @@ var svg = d3.select("#chart").append("svg")
       .domain([0, height])
       .range([0, height]);     
 
-// define main function
-function main(o, direction) {
-        svg.selectAll('text').remove();
-        svg.selectAll('rect').remove();    
-        root = {};
+      root = {};
 
+    d3.select('treemap').remove();
+    
+
+    
     d3.json(direction, function(error, res) {
         if (error) throw error;       
 
@@ -164,7 +177,7 @@ function main(o, direction) {
             .style("fill", function(d) {
                 if (d.key) {
                     return color(d.key);
-                    console.log('key');
+                    console.log('key', d.depth);
                 } else if (d['level_2']) {
                     return color(d['level_2']);
                     console.log('lev 2');
@@ -306,15 +319,16 @@ function main(o, direction) {
             title = 'Exports of Services';              
         }
 
-svg.selectAll('rect').remove();
-svg.selectAll('text').remove(); 
-main(title, file);        
+    svg.selectAll('rect').remove();
+    svg.selectAll('text').remove(); 
+
+    main(title, file);        
        
 
     });
     
 
-// convert big numbers to something readable
+// convert big numbers to something readable and add $
     function convert(num) {
         if (num > 1000000) {
             convert.output = num/1000000;
