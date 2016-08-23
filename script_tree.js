@@ -6,7 +6,7 @@ var width = 1140,
     root,
     rname = 'Total',    
     transitioning,
-    color = d3.scale.category20c(),
+    color = d3.scale.category20(),
     direction = 'data/imports_tree.json'; 
     
 var svg = d3.select("#chart").append("svg")
@@ -159,7 +159,21 @@ function main(o, direction) {
     t.call(text);
 
     g.selectAll("rect")
-        .style("fill", function(d) { return color(d.key); });
+//        .style("fill", function(d) { return color(d.key); });
+    
+            .style("fill", function(d) {
+                if (d.key) {
+                    return color(d.key);
+                    console.log('key');
+                } else if (d['level_2']) {
+                    return color(d['level_2']);
+                    console.log('lev 2');
+                } else {
+                    return color(d['level_1']);
+                }
+        
+        });
+    
 
     toolp = d3.select("body").append("div")   
     .attr("class", "tooltip")               
@@ -292,9 +306,10 @@ function main(o, direction) {
             title = 'Exports of Services';              
         }
 
-
-    main(title, file);        
-
+svg.selectAll('rect').remove();
+svg.selectAll('text').remove(); 
+main(title, file);        
+       
 
     });
     
