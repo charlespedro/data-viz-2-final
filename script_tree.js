@@ -10,14 +10,11 @@ var width = 1140,
     rname = 'Total',    
     transitioning,
     color = d3.scale.category20();
-     
 
-var colr = d3.scale.linear()
-    .domain([-1, 5])
-    .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
-    .interpolate(d3.interpolateHcl);
-
-    
+    var c10 = d3.scale.category10(),
+        c20b = d3.scale.category20b();
+        c20c = d3.scale.category20c();
+         
 var svg = d3.select("#chart").append("svg")
   .attr("width", width + margin.left + margin.right)
   .attr("height", height + margin.bottom + margin.top)
@@ -170,24 +167,25 @@ var grandparent = svg.append("g")
         .attr("dy", "1.0em")
         .text(function(d) { return convert(d.value); });    
     t.call(text);
-
+      
+// creating special cases for Telecom and Transport to give them different colors      
     g.selectAll("rect")
-//        .style("fill", function(d) { return color(d.key); });
-    
-            .style("fill", function(d) {
-                if (d.key) {
-                    return color(d.key);
-                    console.log('key', d.depth);
+     .style("fill", function(d) {
+        if (d.key) {
+                    if ((d.parent['key']) == 'Telecommunications, computer, and information services') {
+                        return c10(d.key);
+                    } else if ((d.parent['key']) == 'Transport') {
+                        return c20c(d.key);
+                    } {
+                        return color(d.key);   // most rect elements will be filled here                     
+                    }
                 } else if (d['level_2']) {
                     return color(d['level_2']);
-                    console.log('lev 2');
                 } else {
-                    return color(d['level_1']);
-                }
-        
+                    return c10(d['level_1']);
+                }        
         });
-    
-
+      
     toolp = d3.select("body").append("div")   
     .attr("class", "tooltip")               
     .style("opacity", 0);            
@@ -314,7 +312,7 @@ var grandparent = svg.append("g")
         if (this.value == 'imports') {
             file = 'data/imports_tree.json';
             title = 'Imports of Services';      
-        } else if (this.value == 'exports') {
+        } else if (this.value == 'exports') { 
             file = 'data/exports_tree.json';
             title = 'Exports of Services';              
         }
