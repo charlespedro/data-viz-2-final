@@ -1,5 +1,6 @@
 // declare variables
 
+// defaulting to imports
 direction = 'data/imports_tree.json';
 
 var margin = {top: 24, right: 0, bottom: 0, left: 0};
@@ -8,12 +9,12 @@ var width = 1140,
     height = 500,    
     root,
     rname = 'Total',    
-    transitioning,
-    color = d3.scale.category20();
+    transitioning;
 
-    var c10 = d3.scale.category10(),
-        c20b = d3.scale.category20b();
-        c20c = d3.scale.category20c();
+// using several color scales to increase variation
+var c20 = d3.scale.category20(),
+    c10 = d3.scale.category10(),
+    c20c = d3.scale.category20c();
          
 var svg = d3.select("#chart").append("svg")
   .attr("width", width + margin.left + margin.right)
@@ -31,6 +32,8 @@ var grandparent = svg.append("g")
 // define main function
   function main(o, direction) {
     
+      
+// putting xy scales in the main loop so that they reset when you change imports/exports      
   var x = d3.scale.linear()
       .domain([0, width])
       .range([0, width]);
@@ -40,14 +43,9 @@ var grandparent = svg.append("g")
       .range([0, height]);     
 
       root = {};
-
-    d3.select('treemap').remove();
-    
-
     
     d3.json(direction, function(error, res) {
         if (error) throw error;       
-
         
     var data = d3.nest().key(function(d) { 
         return d.level_1; 
@@ -90,6 +88,9 @@ var grandparent = svg.append("g")
     root.depth = 0;
     }
 
+        
+    // below is the original Bostock commentary. It's worth leaving it for reference
+        
     // Aggregate the values for internal nodes. This is normally done by the
     // treemap layout, but not here because of our custom implementation.
     // We also take a snapshot of the original children (_children) to avoid
@@ -168,19 +169,19 @@ var grandparent = svg.append("g")
         .text(function(d) { return convert(d.value); });    
     t.call(text);
       
-// creating special cases for Telecom and Transport to give them different colors      
+// creating special cases for Telecom and Travel to give them different colors      
     g.selectAll("rect")
      .style("fill", function(d) {
         if (d.key) {
                     if ((d.parent['key']) == 'Telecommunications, computer, and information services') {
                         return c10(d.key);
-                    } else if ((d.parent['key']) == 'Transport') {
+                    } else if ((d.parent['key']) == 'Travel') {                        
                         return c20c(d.key);
                     } {
-                        return color(d.key);   // most rect elements will be filled here                     
+                        return c20(d.key);   // most rect elements will be filled here                     
                     }
                 } else if (d['level_2']) {
-                    return color(d['level_2']);
+                    return c20(d['level_2']);
                 } else {
                     return c10(d['level_1']);
                 }        
@@ -204,7 +205,6 @@ var grandparent = svg.append("g")
                 .html(function() {
                 if (d['key']) {
                     return d.parent['key'] + '<br>' + '> ' + d['key'] + '<br>' + '>  ' + convert(d.value);
-//                    return d.parent['key'] + '> ' + d['key'] +  '>  ' + convert(d.value);                    
                     } else if (d['level_2']) {
                         return d['level_1'] + '<br>' + '> ' + d['level_2'] + '<br>' + '>  ' + convert(d.value);
                     } else if (d['level_1']) {
@@ -220,9 +220,6 @@ var grandparent = svg.append("g")
                 .duration(0)      
                 .style("opacity", 0)
         });        
-      
-      
-      
 
     function transito(d) {
       if (transitioning || !d) return;
@@ -265,9 +262,6 @@ var grandparent = svg.append("g")
     return g;
       
   }
-
-    
-    
     
       function text(text) {
         text.selectAll("tspan")
@@ -317,12 +311,11 @@ var grandparent = svg.append("g")
             title = 'Exports of Services';              
         }
 
+// wipe the slate clean        
     svg.selectAll('rect').remove();
     svg.selectAll('text').remove(); 
 
     main(title, file);        
-       
-
     });
     
 

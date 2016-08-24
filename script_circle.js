@@ -13,14 +13,12 @@ var svg = d3.select("body")
     .append("svg")
     .attr("width", diameter + 800)
     .attr("height", diameter)
-//    .attr('align', 'center')
     .append("g")
     .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");  
 
  
 // set the default to imports
 var dir = 'data/imports_circle.json';
-
 
     d3.select('#direction').on('change', function () {
         dir = d3.event.target.value;
@@ -36,8 +34,6 @@ function Chart (dir) {
 
     svg.selectAll("text").remove();
 
-//        console.log('function start', chart.direction);
-
     d3.json(chart.direction, function(error, root) {
         if (error) throw error;        
 
@@ -51,11 +47,7 @@ function Chart (dir) {
         .enter().append("circle")
         .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
         .style("fill", function(d) { return d.children ? color(d.depth) : null; })
-//        .on("click", function(d) { if (focus !== d) zoom(d), d3.event.stopPropagation(); });
-        .on("click", function(d) { if (focus !== d && d.depth < 3 ) zoom(d), d3.event.stopPropagation(); 
-                                 
-                                 
-                                 });
+        .on("click", function(d) { if (focus !== d && d.depth < 3 ) zoom(d), d3.event.stopPropagation(); });
 
         var text = svg.selectAll("text")
         .data(nodes)
@@ -98,7 +90,6 @@ function Chart (dir) {
         var node = svg.selectAll("circle,text");
 
         d3.select("body")
-//      .style("background", color(-1))
         .on("click", function() { zoom(root); });
 
         zoomTo([root.x, root.y, root.r * 2 + margin]);
@@ -120,7 +111,6 @@ function Chart (dir) {
             }
 
         function zoomTo(v) {
-//      console.log('zoom to');
             var k = diameter / v[2]; view = v;
             node.attr("transform", function(d) { return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
             circle.attr("r", function(d) { return d.r * k; });
@@ -131,7 +121,8 @@ function Chart (dir) {
     });      
     
 }     
-        
+
+// convert big numbers to something readable and add $
 function convert(num) {
     if (num > 1000000) {
         convert.output = num/1000000;
@@ -147,5 +138,5 @@ function convert(num) {
     return '$' + convert.output;
 }
 
-
- Chart(dir);    
+// call the main function
+Chart(dir);    

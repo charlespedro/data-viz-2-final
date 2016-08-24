@@ -1,3 +1,4 @@
+// declare variables
 
   var data = [];
 
@@ -43,7 +44,6 @@
       .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
       
     // SCALES
- 
       chart.x = d3.scale.linear()
         .domain([0, d3.max(data, function (d) { return d[xvar]; })])
         .range([0, width])
@@ -85,7 +85,6 @@
           .text(ytitle);                 
               
       chart.update();
-      
   }
       
           
@@ -99,8 +98,6 @@
       });
     }
       
-
-        
     // SCATTERPLOT
     var points = chart.svg.selectAll('.point')
       .data(IEdata);
@@ -117,7 +114,6 @@
             if (d.type === 'trade') { return 'blue'; }
             else { return 'red'; } 
         });
-//        .attr('fill', color);
 
     // define function to convert big numbers to something readable
     function convert(num) {
@@ -152,20 +148,17 @@
     .filter(function(e) {
         return e.country == d.country;
         })
-//    .attr('class', 'point_pair')
-    .classed('point_pair', true);
-        
+    .classed('point_pair', true)
+            .attr('r', 15);
         
     d3.select("#tooltip").classed("hidden", false);         //Show the tooltip
     })
         .on('mouseout', function(d) {                            //Hide the tooltip
         d3.select("#tooltip").classed("hidden", true);
-        d3.selectAll('.point_pair').classed('point_pair', false);
+        d3.selectAll('.point_pair')
+            .classed('point_pair', false)
+            .attr('r', 7);
     } );        
-        
-
-
-        
         
     points
     .transition().duration(700)

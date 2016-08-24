@@ -147,7 +147,6 @@ pnode {
 /* scatterplot */
 
     .point_pair {
-        r: 15;
         fill: green;
         stroke: black;
         stroke-width: 3;
